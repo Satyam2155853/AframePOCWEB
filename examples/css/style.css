@@ -1,0 +1,55 @@
+.actions {
+  position: absolute;
+  display: flex;
+  bottom: 3%;
+  left: 3%;
+}
+
+.actions .button {
+  cursor: pointer;
+  background: #fff;
+  height: 40px;
+  width: 130px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.controls {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: row;
+  top: 0;
+}
+
+.controls p {
+  font-family: monospace;
+  color: white;
+}
+
+button {
+  margin: 1em;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 1em;
+  width: 200px;
+  background: transparent;
+  border: 2px solid #f22f46;
+  border-radius: 8px;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+  color: #f22f46;
+  margin-bottom: 4em;
+  margin-block: auto;
+}
+button:hover,
+button:focus {
+  background: #f22f46;
+  color: #fff;
+}
+h1 {
+  text-align: center;
+  font-weight: 100;
+}
