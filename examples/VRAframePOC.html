@@ -25,7 +25,9 @@
 
     <!--   used to prevent players from spawning on top of each other so much  -->
     <script src="/js/spawn-in-circle.component.js"></script>
-    <!-- <script src="./js/movement-animation.component.js"></script> -->
+    <!--scripts-->
+    <script src="./js/rotation-constrain.js"></script>
+    <!-- <script src="./js/test-component.js"></script> -->
 
     <script>
       function onConnect() {
@@ -107,11 +109,10 @@
       <!--Nav Mesh-->
       <a-entity gltf-model="#my-nav-mesh" nav-mesh position="-25 -1.5 -1.5" scale="1.25 1.25 1.25" visible="false"></a-entity>
       <!--Main Code-->
-      <a-entity id="rig" movement-controls spawn-in-circle="radius:3" networked="template:#rig-template;">
+      <a-entity id="rig" movement-controls look-controls spawn-in-circle="radius:3" networked="template:#rig-template;" constrain-look-controls>
         <a-entity
           camera
           position="0 2 2.5"
-          look-controls
           networked="template:#avatar-template;"
           visible="true"
         >
@@ -132,6 +133,7 @@
         <button id="screen-btn" type="button" class="button">Share screen</button>
         <button id="mic-btn" type="button" class="button">Mute Mic</button>
     </div>
+    
 
     <script>
       function onConnect() {
